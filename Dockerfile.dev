@@ -1,0 +1,11 @@
+FROM node:alpine
+
+WORKDIR /usr/app
+
+COPY package.json .
+RUN npm install
+
+# Not neccessary when docker compose file has volume defined that watches changes
+COPY . .
+
+CMD ["npm", "run", "start"]
