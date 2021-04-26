@@ -1,6 +1,7 @@
 language: generic
+os:
+  - linux
 
-sudo: true
 services:
   - docker
 
